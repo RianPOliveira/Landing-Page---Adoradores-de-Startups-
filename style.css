@@ -37,30 +37,28 @@ h2 {
     color: var(--highlight-color);
 }
 
-/* Header ATUALIZADO com Efeito Aurora */
+/* Header com Efeito Aurora */
 header {
-    background-color: var(--dark-bg); /* MUDANÇA: Cor sólida para o efeito funcionar */
+    background-color: var(--dark-bg); 
     text-align: center;
     padding: 80px 20px;
-    position: relative; /* NOVO: Necessário para o efeito */
-    overflow: hidden;   /* NOVO: Necessário para o efeito */
+    position: relative; 
+    overflow: hidden;   
 }
 
-/* NOVO: Pseudo-elemento para criar o degradê que segue o mouse */
 header::before {
     content: '';
     position: absolute;
     width: 600px;
     height: 600px;
-    left: var(--mouse-x, -300px); /* Posição controlada pelo JS */
-    top: var(--mouse-y, -300px);  /* Posição controlada pelo JS */
+    left: var(--mouse-x, -300px); 
+    top: var(--mouse-y, -300px);  
     background: radial-gradient(circle closest-side, rgba(37, 117, 252, 0.3), transparent);
     transform: translate(-50%, -50%);
-    transition: left 0.2s ease-out, top 0.2s ease-out; /* Suaviza o movimento */
+    transition: left 0.2s ease-out, top 0.2s ease-out; 
     z-index: 0;
 }
 
-/* NOVO: Garante que o conteúdo do header fique na frente do efeito */
 header .container {
     position: relative;
     z-index: 1;
@@ -68,7 +66,7 @@ header .container {
 
 
 .logo-header {
-    max-width: 650px; /* Mantido o seu tamanho maior */
+    max-width: 650px;
     margin-bottom: 30px;
 }
 
@@ -94,22 +92,19 @@ main section {
     flex-wrap: wrap;
 }
 
-/* Cards ATUALIZADOS com efeito de hover e animação de entrada */
 .persona-card {
     background-color: #1a1a3a;
     border-radius: 10px;
     padding: 20px;
     width: calc(25% - 15px);
     text-align: center;
-    border: 1px solid transparent; /* NOVO: Borda inicial transparente */
-    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; /* ATUALIZADO: Transição mais suave */
+    border: 1px solid transparent; 
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; 
     
-    /* NOVO: Estado inicial para a animação de scroll */
     opacity: 0;
     transform: translateY(30px);
 }
 
-/* NOVO: Classe que será adicionada via JS para animar a entrada */
 .persona-card.visible {
     opacity: 1;
     transform: translateY(0);
@@ -118,8 +113,8 @@ main section {
 
 .persona-card:hover {
     transform: translateY(-10px);
-    border-color: var(--highlight-color); /* ATUALIZADO: Borda aparece no hover */
-    box-shadow: 0 0 25px rgba(0, 229, 255, 0.3); /* ATUALIZADO: Efeito de brilho (glow) */
+    border-color: var(--highlight-color); 
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.3); 
 }
 
 .persona-card img {
@@ -140,11 +135,9 @@ main section {
     gap: 30px;
 }
 
-/* Cards ATUALIZADOS com animação de entrada */
 .metodo-card {
     text-align: center;
     max-width: 300px;
-    /* NOVO: Estado inicial para a animação de scroll */
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -191,7 +184,7 @@ main section {
 .tab-button:hover, .tab-button.active {
     background-color: var(--highlight-color);
     color: var(--dark-bg);
-    transform: scale(1.05); /* ATUALIZADO: Efeito de crescimento sutil */
+    transform: scale(1.05); 
 }
 
 .tab-content {
@@ -218,7 +211,6 @@ main section {
     text-align: center;
     max-width: 200px;
     
-    /* NOVO: Estado inicial para a animação de scroll */
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -257,7 +249,6 @@ main section {
     padding: 60px 0;
 }
 
-/* Botão ATUALIZADO com hover melhorado */
 .cta-button {
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: white;
@@ -267,12 +258,12 @@ main section {
     font-size: 1.5rem;
     font-weight: 700;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block; /* Necessário para o transform funcionar bem */
+    display: inline-block; 
 }
 
 .cta-button:hover {
-    transform: scale(1.05) translateY(-5px); /* ATUALIZADO: Efeito de levantar e crescer */
-    box-shadow: 0 10px 25px rgba(37, 117, 252, 0.5); /* ATUALIZADO: Sombra mais forte */
+    transform: scale(1.05) translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(37, 117, 252, 0.5); 
 }
 
 footer {
@@ -341,6 +332,11 @@ footer {
 }
 
 
+/* ########################################## */
+/* ##      RESPONSIVIDADE ATUALIZADA       ## */
+/* ########################################## */
+
+/* Para Tablets */
 @media (max-width: 992px) {
     .personas-container {
         justify-content: center;
@@ -351,12 +347,51 @@ footer {
     }
 }
 
+/* Para Celulares e Telas Menores */
 @media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    .persona-card { width: 100%; }
+    /* Ajusta os espaçamentos e fontes gerais */
+    main section {
+        padding: 50px 0;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Ajusta o Header */
+    header {
+        padding: 60px 15px;
+    }
+    .logo-header {
+        max-width: 80%; /* Reduz o tamanho da logo no celular */
+    }
+    header h1 {
+        font-size: 2.5rem; /* Reduz o título principal */
+    }
+    .subheadline {
+        font-size: 1rem;
+    }
+    
+    /* Garante que os cards ocupem a largura toda */
+    .persona-card {
+        width: 100%;
+    }
+    
+    /* Coloca os itens em coluna */
     .metodos-container, .mentores-container {
         flex-direction: column;
         align-items: center;
+        gap: 40px; /* Aumenta o espaçamento vertical entre eles */
+    }
+    
+    /* Ajusta o botão principal */
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+    }
+    
+    /* Ajusta os logos do rodapé */
+    .footer-logos {
+        flex-direction: column; /* Empilha os grupos "Realização" e "Apoio" */
+        gap: 20px;
     }
 }
