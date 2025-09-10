@@ -328,13 +328,15 @@ footer {
 .footer-logos {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 80px; /* Espaçamento maior entre os grupos */
 }
 
 .logo-group {
     text-align: center;
+    /* Adiciona uma margem lateral para dar mais espaço, se necessário */
+    /* margin: 0 40px; */ 
 }
 
 .logo-group p {
@@ -353,13 +355,14 @@ footer {
 .logo-wrapper {
     width: 90px;
     height: 90px;
-    background-color: #f0f0f0; 
+    background-color: white; /* Alterado para ter fundo branco em todas as logos */
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 0; 
     transition: transform 0.3s ease;
+    overflow: hidden; 
 }
 
 .logo-wrapper:hover {
@@ -367,13 +370,10 @@ footer {
 }
 
 .logo-wrapper img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; 
-}
-
-.logo-group img {
-    margin: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; /* Alterado de volta para 'contain' para não cortar as logos */
+    padding: 5px; /* Adiciona um pequeno padding para que a logo não "cole" nas bordas do quadrado branco */
 }
 
 
@@ -389,6 +389,10 @@ footer {
     .persona-card {
         width: calc(50% - 10px);
         margin-bottom: 20px;
+    }
+
+    .logos-grid {
+        justify-content: center; 
     }
 }
 
@@ -407,10 +411,10 @@ footer {
         padding: 60px 15px;
     }
     .logo-header {
-        max-width: 80%; /* Reduz o tamanho da logo no celular */
+        max-width: 80%; 
     }
     header h1 {
-        font-size: 2.5rem; /* Reduz o título principal */
+        font-size: 2.5rem; 
     }
     .subheadline {
         font-size: 1rem;
@@ -425,7 +429,7 @@ footer {
     .metodos-container, .mentores-container {
         flex-direction: column;
         align-items: center;
-        gap: 40px; /* Aumenta o espaçamento vertical entre eles */
+        gap: 40px; 
     }
     
     /* Ajusta o botão principal */
@@ -436,8 +440,11 @@ footer {
     
     /* Ajusta os logos do rodapé */
     .footer-logos {
-        flex-direction: column; /* Empilha os grupos "Realização" e "Apoio" */
-        gap: 20px;
+        flex-direction: column; 
+        gap: 40px; /* Reduzido para não ficar tão espaçado em mobile */
     }
     
+    .logos-grid {
+        justify-content: center; 
+    }
 }
