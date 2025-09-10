@@ -274,12 +274,31 @@ main section {
 
 #local {
     text-align: center;
+    padding: 80px 0;
+}
+
+.local-button {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.local-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
 }
 
 #local .local-title {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 footer {
@@ -421,8 +440,4 @@ footer {
         gap: 20px;
     }
     
-    /* Ajusta o mapa no mobile */
-    #local iframe {
-        height: 300px;
-    }
 }
