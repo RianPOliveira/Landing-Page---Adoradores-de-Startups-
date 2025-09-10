@@ -37,7 +37,6 @@ h2 {
     color: var(--highlight-color);
 }
 
-/* Header com Efeito Aurora */
 header {
     background-color: var(--dark-bg); 
     text-align: center;
@@ -205,6 +204,13 @@ main section {
     color: var(--light-text);
 }
 
+.carga-horaria {
+    text-align: center;
+    margin: -30px auto 30px auto;
+    font-size: 1.1rem;
+    color: var(--light-text);
+}
+
 .mentores-container {
     display: flex;
     justify-content: space-around;
@@ -230,8 +236,6 @@ main section {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    /* Removendo a borda de destaque para deixar a imagem "limpa" */
-    /* border: 3px solid var(--highlight-color); */
     margin-bottom: 15px;
 }
 
@@ -330,13 +334,11 @@ footer {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 80px; /* Espaçamento maior entre os grupos */
+    gap: 80px; 
 }
 
 .logo-group {
     text-align: center;
-    /* Adiciona uma margem lateral para dar mais espaço, se necessário */
-    /* margin: 0 40px; */ 
 }
 
 .logo-group p {
@@ -355,7 +357,7 @@ footer {
 .logo-wrapper {
     width: 90px;
     height: 90px;
-    background-color: white; /* Alterado para ter fundo branco em todas as logos */
+    background-color: white; 
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -372,16 +374,11 @@ footer {
 .logo-wrapper img {
     width: 100%; 
     height: 100%; 
-    object-fit: contain; /* Alterado de volta para 'contain' para não cortar as logos */
-    padding: 5px; /* Adiciona um pequeno padding para que a logo não "cole" nas bordas do quadrado branco */
+    object-fit: contain;
+    padding: 5px; 
 }
 
 
-/* ########################################## */
-/* ##      RESPONSIVIDADE ATUALIZADA       ## */
-/* ########################################## */
-
-/* Para Tablets */
 @media (max-width: 992px) {
     .personas-container {
         justify-content: center;
@@ -396,9 +393,7 @@ footer {
     }
 }
 
-/* Para Celulares e Telas Menores */
 @media (max-width: 768px) {
-    /* Ajusta os espaçamentos e fontes gerais */
     main section {
         padding: 50px 0;
     }
@@ -406,7 +401,6 @@ footer {
         font-size: 2rem;
     }
 
-    /* Ajusta o Header */
     header {
         padding: 60px 15px;
     }
@@ -420,28 +414,23 @@ footer {
         font-size: 1rem;
     }
     
-    /* Garante que os cards ocupem a largura toda */
     .persona-card {
         width: 100%;
     }
     
-    /* Coloca os itens em coluna */
     .metodos-container, .mentores-container {
         flex-direction: column;
         align-items: center;
         gap: 40px; 
     }
-    
-    /* Ajusta o botão principal */
-    .cta-button {
+     .cta-button {
         font-size: 1.2rem;
         padding: 15px 30px;
     }
     
-    /* Ajusta os logos do rodapé */
     .footer-logos {
         flex-direction: column; 
-        gap: 40px; /* Reduzido para não ficar tão espaçado em mobile */
+        gap: 40px; 
     }
     
     .logos-grid {
