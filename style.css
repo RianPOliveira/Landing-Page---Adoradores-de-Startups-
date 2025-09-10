@@ -43,7 +43,7 @@ header {
     text-align: center;
     padding: 80px 20px;
     position: relative; 
-    overflow: hidden;   
+    overflow: hidden;  
 }
 
 header::before {
@@ -63,7 +63,6 @@ header .container {
     position: relative;
     z-index: 1;
 }
-
 
 .logo-header {
     max-width: 650px;
@@ -110,7 +109,6 @@ main section {
     transform: translateY(0);
 }
 
-
 .persona-card:hover {
     transform: translateY(-10px);
     border-color: var(--highlight-color); 
@@ -147,7 +145,6 @@ main section {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 .metodo-card i {
     width: 60px;
@@ -200,6 +197,14 @@ main section {
     display: block;
 }
 
+.cronograma-info {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--light-text);
+}
+
 .mentores-container {
     display: flex;
     justify-content: space-around;
@@ -225,7 +230,8 @@ main section {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 3px solid var(--highlight-color);
+    /* Removendo a borda de destaque para deixar a imagem "limpa" */
+    /* border: 3px solid var(--highlight-color); */
     margin-bottom: 15px;
 }
 
@@ -266,6 +272,16 @@ main section {
     box-shadow: 0 10px 25px rgba(37, 117, 252, 0.5); 
 }
 
+#local {
+    text-align: center;
+}
+
+#local .local-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
 footer {
     background-color: #050515;
     padding: 40px 0;
@@ -278,6 +294,16 @@ footer {
 
 .footer-info p {
     margin: 5px 0;
+}
+
+.footer-info a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: var(--secondary-color);
 }
 
 .footer-logos {
@@ -393,5 +419,10 @@ footer {
     .footer-logos {
         flex-direction: column; /* Empilha os grupos "Realização" e "Apoio" */
         gap: 20px;
+    }
+    
+    /* Ajusta o mapa no mobile */
+    #local iframe {
+        height: 300px;
     }
 }
