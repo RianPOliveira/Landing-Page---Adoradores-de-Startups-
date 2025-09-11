@@ -5,7 +5,8 @@
     --secondary-color: #2575fc;
     --dark-bg: #0a0a1f;
     --light-text: #f0f0f0;
-    --highlight-color: #00e5ff;
+    /* MUDANÇA AQUI: Cor principal de destaque alterada para amarelo */
+    --highlight-color: #FFFF00; /* Pode usar 'yellow' ou um tom como #FFD700 */
 }
 
 * {
@@ -51,8 +52,8 @@ header::before {
     width: 600px;
     height: 600px;
     left: var(--mouse-x, -300px); 
-    top: var(--mouse-y, -300px); 
-    /* MODIFIQUE A COR AQUI */
+    top: var(--mouse-y, -300px);  
+    /* Efeito aurora já estava amarelo, agora combina com o resto */
     background: radial-gradient(circle closest-side, rgba(255, 255, 0, 0.3), transparent);
     transform: translate(-50%, -50%);
     transition: left 0.2s ease-out, top 0.2s ease-out; 
@@ -70,9 +71,10 @@ header .container {
 }
 
 header h1 {
- font-size: 3.5rem;
-margin-bottom: 10px;
-color: yellow;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    /* MUDANÇA AQUI: Usando a variável para manter o padrão */
+    color: var(--highlight-color);
 }
 
 .subheadline {
@@ -113,7 +115,8 @@ main section {
 .persona-card:hover {
     transform: translateY(-10px);
     border-color: var(--highlight-color); 
-    box-shadow: 0 0 25px rgba(0, 229, 255, 0.3); 
+    /* MUDANÇA AQUI: Efeito de brilho (glow) agora é amarelo */
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.3); 
 }
 
 .persona-card img {
@@ -278,7 +281,8 @@ main section {
 
 .cta-button:hover {
     transform: scale(1.05) translateY(-5px); 
-    box-shadow: 0 10px 25px rgba(37, 117, 252, 0.5); 
+    /* MUDANÇA AQUI: Sombra do botão agora reflete o amarelo */
+    box-shadow: 0 10px 25px rgba(255, 255, 0, 0.25); 
 }
 
 #local {
@@ -301,7 +305,8 @@ main section {
 
 .local-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+    /* MUDANÇA AQUI: Sombra do botão agora reflete o amarelo */
+    box-shadow: 0 5px 15px rgba(255, 255, 0, 0.2);
 }
 
 #local .local-title {
