@@ -128,13 +128,14 @@ main section {
 
 .metodos-container {
     display: flex;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .metodo-card {
     text-align: center;
-    max-width: 300px;
+    max-width: 250px;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -198,7 +199,7 @@ main section {
 
 .cronograma-info {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 1.1rem;
     font-style: italic;
     color: var(--light-text);
@@ -206,7 +207,7 @@ main section {
 
 .carga-horaria {
     text-align: center;
-    margin: -30px auto 30px auto;
+    margin-bottom: 30px;
     font-size: 1.1rem;
     color: var(--light-text);
 }
@@ -254,8 +255,10 @@ main section {
     font-size: 0.9rem;
 }
 
-#cta {
-    text-align: center;
+
+/* CORREÇÃO DE CENTRALIZAÇÃO E POSICIONAMENTO */
+#cta-final {
+    text-align: center; /* Garante que o botão fique centralizado */
     padding: 60px 0;
 }
 
@@ -312,7 +315,7 @@ footer {
 }
 
 .footer-info {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .footer-info p {
@@ -329,53 +332,35 @@ footer {
     color: var(--secondary-color);
 }
 
-.footer-logos {
+.footer-logos-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 80px; 
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 60px;
 }
 
 .logo-group {
     text-align: center;
+    max-width: 500px;
 }
 
 .logo-group p {
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: var(--highlight-color);
+    font-size: 1.2rem;
 }
 
-.logos-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; 
+.logo-strip {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
-.logo-wrapper {
-    width: 90px;
-    height: 90px;
-    background-color: white; 
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0; 
-    transition: transform 0.3s ease;
-    overflow: hidden; 
-}
-
-.logo-wrapper:hover {
-    transform: scale(1.1);
-}
-
-.logo-wrapper img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: contain;
-    padding: 5px; 
+.logo-strip:hover {
+    opacity: 1;
 }
 
 
@@ -387,9 +372,12 @@ footer {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-
-    .logos-grid {
-        justify-content: center; 
+    .metodos-container {
+        justify-content: center;
+    }
+    .metodo-card {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
     }
 }
 
@@ -414,12 +402,12 @@ footer {
         font-size: 1rem;
     }
     
-    .persona-card {
+    .persona-card, .metodo-card {
         width: 100%;
     }
     
     .metodos-container, .mentores-container {
-        flex-direction: column;
+        flex-direction: column; 
         align-items: center;
         gap: 40px; 
     }
@@ -428,12 +416,12 @@ footer {
         padding: 15px 30px;
     }
     
-    .footer-logos {
+    .footer-logos-container {
         flex-direction: column; 
-        gap: 40px; 
+        gap: 40px;
+        align-items: center;
     }
-    
-    .logos-grid {
-        justify-content: center; 
+    .logo-strip {
+        max-width: 90%;
     }
 }
