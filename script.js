@@ -69,5 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.setProperty('--mouse-y', `${y}px`);
         });
     }
+    
+    // MUDANÇA FINAL E MAIS IMPORTANTE:
+    // Verifica se a biblioteca 'feather' realmente carregou antes de tentar usá-la.
+    // Isso impede que a página quebre se o script dos ícones falhar.
+    if (typeof feather !== 'undefined') {
+        feather.replace();
+    }
 
 });

@@ -1,0 +1,2 @@
+PROFESSOR,20256522,bruno,True,1500.0,2
+ALUNO,20257708,lucas,True,computação,45,5,8.0,7.0,9.0,8.0
