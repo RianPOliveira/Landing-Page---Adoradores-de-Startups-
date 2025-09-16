@@ -5,8 +5,7 @@
     --secondary-color: #2575fc;
     --dark-bg: #0a0a1f;
     --light-text: #f0f0f0;
-    /* MUDANÇA AQUI: Cor principal de destaque alterada para amarelo */
-    --highlight-color: #FFFF00; /* Pode usar 'yellow' ou um tom como #FFD700 */
+    --highlight-color: #FFFF00; 
 }
 
 * {
@@ -53,7 +52,6 @@ header::before {
     height: 600px;
     left: var(--mouse-x, -300px); 
     top: var(--mouse-y, -300px);  
-    /* Efeito aurora já estava amarelo, agora combina com o resto */
     background: radial-gradient(circle closest-side, rgba(255, 255, 0, 0.3), transparent);
     transform: translate(-50%, -50%);
     transition: left 0.2s ease-out, top 0.2s ease-out; 
@@ -73,7 +71,6 @@ header .container {
 header h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
-    /* MUDANÇA AQUI: Usando a variável para manter o padrão */
     color: var(--highlight-color);
 }
 
@@ -102,7 +99,6 @@ main section {
     text-align: center;
     border: 1px solid transparent; 
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; 
-    
     opacity: 0;
     transform: translateY(30px);
 }
@@ -115,7 +111,6 @@ main section {
 .persona-card:hover {
     transform: translateY(-10px);
     border-color: var(--highlight-color); 
-    /* MUDANÇA AQUI: Efeito de brilho (glow) agora é amarelo */
     box-shadow: 0 0 25px rgba(255, 255, 0, 0.3); 
 }
 
@@ -227,7 +222,6 @@ main section {
 .mentor-card {
     text-align: center;
     max-width: 200px;
-    
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -260,10 +254,14 @@ main section {
     font-size: 0.9rem;
 }
 
+/* Novo estilo para os botões de CTA em todas as seções */
+.cta-section-button-container {
+    text-align: center;
+    margin-top: 50px;
+}
 
-/* CORREÇÃO DE CENTRALIZAÇÃO E POSICIONAMENTO */
 #cta-final {
-    text-align: center; /* Garante que o botão fique centralizado */
+    text-align: center;
     padding: 60px 0;
 }
 
@@ -281,7 +279,6 @@ main section {
 
 .cta-button:hover {
     transform: scale(1.05) translateY(-5px); 
-    /* MUDANÇA AQUI: Sombra do botão agora reflete o amarelo */
     box-shadow: 0 10px 25px rgba(255, 255, 0, 0.25); 
 }
 
@@ -305,7 +302,6 @@ main section {
 
 .local-button:hover {
     transform: scale(1.05);
-    /* MUDANÇA AQUI: Sombra do botão agora reflete o amarelo */
     box-shadow: 0 5px 15px rgba(255, 255, 0, 0.2);
 }
 
@@ -370,7 +366,6 @@ footer {
     opacity: 1;
 }
 
-
 @media (max-width: 992px) {
     .personas-container {
         justify-content: center;
@@ -418,7 +413,7 @@ footer {
         align-items: center;
         gap: 40px; 
     }
-     .cta-button {
+    .cta-button {
         font-size: 1.2rem;
         padding: 15px 30px;
     }
